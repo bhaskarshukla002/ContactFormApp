@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Contact Form App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start_filling_form">Start Filling Form</string>
+    <string name="select_gender_error">Please select a gender!</string>
+    <string name="invalid_age_error">Please enter a valid age between 0 and 100</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string name="capture_selfie_message">Please capture a selfie.</string>
+    <string name="image_saved_message">Image saved at %1$s</string>
+    <string name="failed_to_save_image">Failed to save image.</string>
+    <string name="capture_cancelled">Capture cancelled.</string>
+
+</resources>

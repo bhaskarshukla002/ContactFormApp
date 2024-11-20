@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.result.ResultFragment">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Vertical ScrollView with horizontal scrolling enabled for TableLayout -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/resultTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:stretchColumns="1"
+                android:background="#f8f9fa">
+
+                <!-- Table Header Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#404040">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Q1"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Q2"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Q3"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="RecordedAudio"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="GPS"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="SubmissionTime"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <!-- Data Row (dynamic) -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/tvQ1Answer"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tvQ2Answer"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tvQ3ImagePath"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tvRecordingPath"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tvGpsCoordinates"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tvSubmitTime"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Loading..."
+                        android:textColor="#333333" />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
